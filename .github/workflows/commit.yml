@@ -11,7 +11,7 @@ jobs:
           ref: ${{ github.ref }}
           sparse-checkout: urls.txt
 
-      - run: echo $RANDOM > results/$RANDOM.txt
+      - run: touch results/$RANDOM.txt
 
       - uses: EndBug/add-and-commit@v9
         with:
