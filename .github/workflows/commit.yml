@@ -11,7 +11,7 @@ jobs:
           ref: ${{ github.ref }}
           sparse-checkout: urls.txt
 
-      - run: pwd
+      - run: pwd && ls
 
       - run: touch ${{ github.workspace }}/results/$RANDOM.txt
 
