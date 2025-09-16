@@ -15,6 +15,9 @@ jobs:
 
       - run: mkdir ${{ github.workspace }}/results && touch ${{ github.workspace }}/results/$RANDOM.txt
 
+      - run: git fetch
+      - run: git ls-remote
+
       - uses: EndBug/add-and-commit@v9
         with:
           add: "--sparse results"
