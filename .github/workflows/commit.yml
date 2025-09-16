@@ -15,8 +15,6 @@ jobs:
 
       - run: mkdir ${{ github.workspace }}/results && touch ${{ github.workspace }}/results/$RANDOM.txt
 
-      - run: git remote add origin https://github.com/${{ github.repository }}.git
-
       - uses: EndBug/add-and-commit@v9
         with:
           add: "--sparse results"
